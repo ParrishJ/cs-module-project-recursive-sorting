@@ -52,7 +52,29 @@ def merge_sort(arr):
 # or data structures; it can only re-use the memory it was given as input
 def merge_in_place(arr, start, mid, end):
     # Your code here
-    pass
+    elements = len(arrA) + len(arrB)
+    merged_arr = [0] * elements
+    count = 0
+
+    while arrA or arrB:
+        if len(arrA) != 0 and len(arrB) == 0:
+            merged_arr[count] = arrA[0]
+            arrA.pop(0)
+            count += 1
+        elif len(arrB) != 0 and len(arrA) == 0:
+            merged_arr[count] = arrB[0]
+            arrB.pop(0)
+            count += 1
+        elif arrA[0] < arrB[0]:
+            merged_arr[count] = arrA[0]
+            arrA.pop(0)
+            count += 1
+        elif arrB[0] < arrA[0]:
+            merged_arr[count] = arrB[0]
+            arrB.pop(0)
+            count += 1 
+ 
+    return merged_arr
 
 def merge_sort_in_place(arr, l, r):
     # Your code here
