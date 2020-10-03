@@ -1,5 +1,5 @@
 # TO-DO: complete the helper function below to merge 2 sorted arrays
-test_arr = [1, 5, 3, 2]
+#test_arr = [1, 5, 3, 2]
 #test_arr_b = [5, 6]
 
 def merge(arrA, arrB):
@@ -45,7 +45,6 @@ def merge_sort(arr):
     
     return merge(merge_sort(left), merge_sort(right))
 
-merge_sort(test_arr)
 
 # STRETCH: implement the recursive logic for merge sort in a way that doesn't 
 # utilize any extra memory
